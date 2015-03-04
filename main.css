@@ -1,0 +1,33 @@
+body {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 0.9em;
+}
+
+input {
+	padding: 3px;
+}
+
+.color-change {
+	padding: 10px;
+	width: 146px;
+	border: 1px solid #000;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; 
+}
+
+.green {
+	background-color: #59B390;
+}
+
+.blue {
+  background-color: #3A89C9;
+}
+
+.purple {
+	background-color: #CC3299;
+}
+
+.yellow {
+	background-color: #FFE9AF;
+}
