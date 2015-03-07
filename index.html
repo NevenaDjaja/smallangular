@@ -14,16 +14,22 @@
 					{{"Lets" + " get" + " started!"}}
 				</div>
 				<h3 class="controller-msg"> {{message}} </h3>
-				<div>
-					<h3>Type anything</h3>
-					<input type="text" ng-model="data.message">
-					<p>{{data.message}}</p>
-				</div>
-				<div>
-					<h3>Type green, blue, purple or yellow</h3>
-					<input type="text" ng-model="data.color">
-					<p class="{{data.color}} color-change">I am changing color</p>
-				</div>
+			</div>
+			<div ng-controller="FirstController">
+				<h3>{{data.text}}</h3>
+				<input type="text" ng-model="data.message">
+				<p>{{data.message}}</p>
+			</div>
+			<!-- this creates a new scope -->
+			<div ng-controller="SecondController">
+				<h3>Type again</h3>
+				<input type="text" ng-model="data.message">
+				<p>{{data.message}}</p>
+			</div>
+			<div>
+				<h3>Type green, blue, purple or yellow</h3>
+				<input type="text" ng-model="data.color">
+				<p class="{{data.color}} color-change">I am changing color</p>
 			</div>
 		</div>
 	</body>
