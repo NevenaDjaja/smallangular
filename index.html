@@ -3,23 +3,28 @@
 	<head>
 		<title>Small Anuglar app - Tutorial </title>
 		<link rel="stylesheet" href="main.css">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+		<script type="text/javascript" src="lib/angular.js"></script>
+		<script type="text/javascript" src="main.js"></script>
 	</head>
-	<body ng-app="">
-		<h2>Small AngularJS app</h2>
-		<div>
-			{{"Lets" + " get" + " started!"}}
+	<body >
+		<div ng-app="testApp">
+			<div ng-controller="TestController">
+				<h2>Small AngularJS app</h2>
+				<div>
+					{{"Lets" + " get" + " started!"}}
+				</div>
+				<h3 class="controller-msg"> {{message}} </h3>
+				<div>
+					<h3>Type anything</h3>
+					<input type="text" ng-model="data.message">
+					<p>{{data.message}}</p>
+				</div>
+				<div>
+					<h3>Type green, blue, purple or yellow</h3>
+					<input type="text" ng-model="data.color">
+					<p class="{{data.color}} color-change">I am changing color</p>
+				</div>
+			</div>
 		</div>
-		<div>
-			<h3>Type anything</h3>
-			<input type="text" ng-model="data.message">
-			<p>{{data.message}}</p>
-		</div>
-		<div>
-			<h3>Type green, blue, purple or yellow</h3>
-			<input type="text" ng-model="data.color">
-			<p class="{{data.color}} color-change">I am changing color</p>
-		</div>
-
 	</body>
 </html>
