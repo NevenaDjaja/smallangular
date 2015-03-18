@@ -10,12 +10,23 @@
 		<div ng-app="MyApp">
 			<div ng-controller="FriendsController">
 				<input type="text" ng-model="searchText">
+
+				<h3> Simple table </h3>
 				<table>
 					<tr ng-repeat="friend in friends | filter:searchText"> 
+						<td>{{friend.name | uppercase}}</td>
+						<td>{{friend.job}}</td>
+					</tr>
+				</table>
+
+				<h3> Ordered table </h3>
+				<table>
+					<tr ng-repeat="friend in friends | orderBy:'name' | filter:searchText"> 
 						<td>{{friend.name}}</td>
 						<td>{{friend.job}}</td>
 					</tr>
 				</table>
+
 			</div>
 		</div>
 	</body>
